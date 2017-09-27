@@ -51,7 +51,8 @@ ctrl + r - redo
 run emacs in terminal mode: emacs . -nw short for --no-window-system
 
 ### Puts
-p - pastes the contents of the buffer below the line that the cursor is on
+p - pastes the contents of the buffer
+If it’s a char, it’s pastes after the next char, if it’s a line, it’s after the next line and so on.
 
 ### Replace
 r + character - replaces the character that the cursor is on
