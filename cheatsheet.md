@@ -1,6 +1,4 @@
-# Vim Notes
-
-## Day 1
+# Vim Cheatsheet
 
 ### Navigation
 h - left
@@ -11,6 +9,13 @@ j - down
 $ - go to end of line
 0 - go to beginning of line
 Shift + i - go to the beginning and shift to editing mode
+
+G - move to the end of the buffer
+gg - move to the start of the buffer
+:{line_number} - go to a given line e.g. :102 will go to line 102
+
+w - move forward one word
+b - move backwards one word
 
 ### Insertion
 i - insert before 
@@ -46,14 +51,12 @@ ctrl + r - redo
 - Press 'y' to (yank) copy
 - Move to desired paste location, press P to paste before or 'p' to paste after
 
-##  Day 2
-
-run emacs in terminal mode: emacs . -nw short for --no-window-system
-
 ### Puts
+
 p - pastes the contents of the buffer below the line that the cursor is on
 
 ### Replace
+
 r + character - replaces the character that the cursor is on
 
 ### Searching
@@ -64,19 +67,12 @@ While in command mode (prefixed with colon to differentiate)
 :%s/foo/bar/gc replaces ALL instances of foo with bar but asks for confirmation each time
 
 ### Highlighting
-I found this one out by accident...
-
 /* - highlight all occurences of the word under the cursor. Will then traverse forward through matches on subsequent presses, use # to traverse backwards.
 :noh - typing this in command mode will remove all the highlights
 
 ### Change word
 cw - deletes a word or to the end of a word based on the current cursor position then places you in insert mode.
 We can use this in the same manner as delete e.g. c$ will delete to the end of the line from the current cursor.
-
-### Navigation
-G - move to the end of the buffer
-gg - move to the start of the buffer
-:{line_number} - go to a given line e.g. :102 will go to line 102
 
 ### Search
 /{term}{enter} - search forwards for a term
@@ -90,8 +86,6 @@ N - traverse backwards through matches
 ### Duplicate a line
 yyp - copies a line then pastes it below the original
 
-## Day 3
-
 ### File fuzzy search
 SPC p f will open the fuzzy file search
 
@@ -102,13 +96,9 @@ SPC w s - split horizontally
 SPC w l - move to window on the right
 SPC w h - move to window on the left
 
-### Navigation
-w - move forward one word
-b - move backwards one word
-
 ### Select all
 ggVG
 
 gg - move to the top of the buffer
-V - select the line
+V - select current line
 G - move to end of buffer
