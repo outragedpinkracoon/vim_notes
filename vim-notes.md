@@ -113,3 +113,9 @@ ggVG
 gg - move to the top of the buffer
 V - select the line
 G - move to end of buffer
+
+### Tree view
+SPC f t - open tree view
+The tree view is clickable, and can be focused and unfocused using the window commands mentioned previously. It is traversed using hjkl or the arrow keys as normal. Hitting enter will expand a folder.
+
+Pressing | on an item in the tree view opens it up in a new vertical frame
