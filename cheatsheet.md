@@ -18,15 +18,30 @@ w - move forward one word, having cursor at the start of the word
 e - move forward one word, having cursor at the end of the word
 b - move backwards one word
 
+U - move to the top of the screen
+L - move to the bottom of the screen
+M - move to the middle of the screen
+
 ## Insertion
 i - insert before 
 a - insert after
+A - moves to the end of the line and enables insert mode (NICE!)
+
+## The open command
+o - open a line below the cursor and enable insert mode
+O - open a line above the cursor and enable insert mode
 
 ## Deletion
 dw - delete to end of word
 d$ - delete to the end of the line
 dd - delete the entire line
 2dd - delete 2 lines
+
+x - delete character under the cursor
+X - delete character before the cursor
+
+daw - delete the word under the cursor    
+caw - delete the word under the cursor and put you in insert mode
 
 ## Command Format
 The format for commands is:
@@ -52,13 +67,29 @@ ctrl + r - redo
 - Press 'y' to (yank) copy
 - Move to desired paste location, press P to paste before or 'p' to paste after
 
+## Select all
+ggVG
+
+gg - move to the top of the buffer
+V - select current line
+G - move to end of buffer
+
 ## Puts
 p - pastes the contents of the buffer.
 If it’s a char, it’s pastes after the next char, if it’s a line, it’s after the next line and so on
 
 ## Replace
-
 r + character - replaces the character that the cursor is on
+R - allows you to type over existing text starting from the cursor posititon.
+Press ESC when finished.
+
+## Duplicate a line
+yyp - copies a line then pastes it below the original
+ddp - swap current line with the next
+
+## Move lines
+[e - move line up
+]e - move line down
 
 ## Searching
 While in command mode (prefixed with colon to differentiate)
@@ -84,10 +115,6 @@ N - traverse backwards through matches
 ## Matching brackets
 % - takes you to the corresponding matching bracket
 
-## Duplicate a line
-yyp - copies a line then pastes it below the original
-ddp - swap current line with the next
-
 ## Files Management
 SPC p f will open the fuzzy file search
 SPC b b - open recent files
@@ -106,20 +133,11 @@ SPC w h - move to window on the left
 ## Toggle Line Numbers
 SPC t n
 
-## Select all
-ggVG
-
-gg - move to the top of the buffer
-V - select current line
-G - move to end of buffer
-
 ## Tree view
 SPC f t - open tree view
 The tree view is clickable, and can be focused and unfocused using the window commands mentioned previously. It is traversed using hjkl or the arrow keys as normal. Hitting enter will expand a folder.
 
 Pressing | on an item in the tree view opens it up in a new vertical frame
 
-## Modes
-1. Command - pressing keys maps to actions, such as change word, delete etc
-2. Insert - pressing keys adds characters to the text
-3. Visual block - pressing ctrl + v starts visual block mode where pressing keys allows us to select text
+## Go to last change
+'. (looks weird right?)

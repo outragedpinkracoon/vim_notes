@@ -5,7 +5,7 @@
 ### Navigation
 h - left
 l - right
-k - up 
+k - up
 j - down
 
 $ - go to end of line
@@ -13,7 +13,7 @@ $ - go to end of line
 Shift + i - go to the beginning and shift to editing mode
 
 ### Insertion
-i - insert before 
+i - insert before
 a - insert after
 
 ### Deletion
@@ -132,10 +132,64 @@ SPC b b
 
 ### Saving Files
 SPC f s - save changes to file
-(same as :w in vim command mode)
+(same as :w in command mode)
+SPC f S - save all open files
+(same as :wqa in command mode)
 
 ### Swap two lines
 ddp - swap current line with the next
 
 ### Toggle line numbers
 SPC t n
+
+## Day 4
+
+### Moving around the screen
+U - move to the top of the screen
+L - move to the bottom of the screen
+M - move to the middle of the screen
+
+### Go to last change
+'. (looks weird right?)
+
+### Move lines
+[e - move line up
+]e - move line down
+
+### Adding space
+[SPC - add space above
+]SPC - add space below
+
+### Deleting characters
+x - delete character under the cursor
+X - delete character before the cursor
+
+### Deleting words
+daw : delete the word under the cursor    
+caw : delete the word under the cursor and put you in insert mode
+
+### Execute an external command
+:!{external command} e.g. :!ls
+
+### Create a file
+:w {name of file} - writes active file to the current directory
+(though i just learned you could also :!touch)
+
+:{start line number},{end line number} w {filename}
+- writes to active file just the content between the specified lines
+
+### Insert the contents of a file
+:r {filename} - places the contents of a file under the current cursor location
+
+### The open command
+o - open a line below the cursor and enable insert mode
+O - open a line above the cursor and enable insert mode
+
+### Replacing more than one character
+R - allows you to type over existing text starting from the cursor posititon.
+Press ESC when finished.
+
+### Faster insert at the end of the line
+A - moves to the end of the line and enables insert mode (NICE!)
+
+
