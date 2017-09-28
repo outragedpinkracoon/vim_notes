@@ -1,4 +1,4 @@
-# Vim Cheatsheet
+# Vim / Spacemacs Cheatsheet
 
 ## Navigation
 h - left  
@@ -63,7 +63,7 @@ u - undo the last command
 ctrl + r - redo
 
 ## Copy
-- position cursor at the beginning of the text you want to copy
+- Position cursor at the beginning of the text you want to copy
 - Press 'v' to select characters, V for whole lines, ctrl-v or ctrl-q for blocks
 - Press 'y' to (yank) copy
 - Move to desired paste location, press P to paste before or 'p' to paste after

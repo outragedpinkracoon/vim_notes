@@ -165,7 +165,7 @@ x - delete character under the cursor
 X - delete character before the cursor
 
 ### Deleting words
-daw : delete the word under the cursor    
+daw : delete the word under the cursor  
 caw : delete the word under the cursor and put you in insert mode
 
 ### Execute an external command
