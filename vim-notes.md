@@ -119,3 +119,8 @@ SPC f t - open tree view
 The tree view is clickable, and can be focused and unfocused using the window commands mentioned previously. It is traversed using hjkl or the arrow keys as normal. Hitting enter will expand a folder.
 
 Pressing | on an item in the tree view opens it up in a new vertical frame
+
+### Modes
+1. Command - pressing keys maps to actions, such as change word, delete etc
+2. Insert - pressing keys adds characters to the text
+3. Visual block - pressing ctrl + v starts visual block mode where pressing keys allows us to select text
