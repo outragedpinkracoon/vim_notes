@@ -12,6 +12,7 @@ Shift + i - go to the beginning and shift to editing mode
 
 G - move to the end of the buffer  
 gg - move to the start of the buffer  
+
 :{line_number} - go to a given line e.g. :102 will go to line 102  
 
 w - move forward one word, having cursor at the start of the word  
@@ -62,9 +63,9 @@ u - undo the last command
 ctrl + r - redo
 
 ## Copy
-- position cursor at the beginning of the text you want to copy  
-- Press 'v' to select characters, V for whole lines, ctrl-v or ctrl-q for blocks  
-- Press 'y' to (yank) copy  
+- position cursor at the beginning of the text you want to copy
+- Press 'v' to select characters, V for whole lines, ctrl-v or ctrl-q for blocks
+- Press 'y' to (yank) copy
 - Move to desired paste location, press P to paste before or 'p' to paste after
 
 ## Select all
@@ -90,6 +91,9 @@ ddp - swap current line with the next
 ## Move lines
 [e - move line up
 ]e - move line down
+
+## Go to last change
+'. (looks weird right?)
 
 ## Searching
 While in command mode (prefixed with colon to differentiate)
@@ -135,9 +139,7 @@ SPC t n
 
 ## Tree view
 SPC f t - open tree view  
-The tree view is clickable, and can be focused and unfocused using the window commands mentioned previously. It is traversed using hjkl or the arrow keys as normal. Hitting enter will expand a folder.
+The tree view is clickable, and can be focused and unfocused using the window commands mentioned previously.  
+It is traversed using hjkl or the arrow keys as normal. Hitting enter will expand a folder.
 
 Pressing | on an item in the tree view opens it up in a new vertical frame
-
-## Go to last change
-'. (looks weird right?)
