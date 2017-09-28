@@ -102,9 +102,11 @@ SPC w s - split horizontally
 
 SPC w l - move to window on the right
 SPC w h - move to window on the left
+SPC w d - close window
 
 ### Navigation
-w - move forward one word
+w - move forward one word, having cursor at the start of the word
+e - move forward one word, having cursor at the end of the word
 b - move backwards one word
 
 ### Select all
@@ -124,3 +126,16 @@ Pressing | on an item in the tree view opens it up in a new vertical frame
 1. Command - pressing keys maps to actions, such as change word, delete etc
 2. Insert - pressing keys adds characters to the text
 3. Visual block - pressing ctrl + v starts visual block mode where pressing keys allows us to select text
+
+### Open Recent Files
+SPC b b
+
+### Saving Files
+SPC f s - save changes to file
+(same as :w in vim command mode)
+
+### Swap two lines
+ddp - swap current line with the next
+
+### Toggle line numbers
+SPC t n

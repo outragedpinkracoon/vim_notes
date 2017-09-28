@@ -14,7 +14,8 @@ G - move to the end of the buffer
 gg - move to the start of the buffer
 :{line_number} - go to a given line e.g. :102 will go to line 102
 
-w - move forward one word
+w - move forward one word, having cursor at the start of the word
+e - move forward one word, having cursor at the end of the word
 b - move backwards one word
 
 ### Insertion
@@ -85,9 +86,15 @@ N - traverse backwards through matches
 
 ### Duplicate a line
 yyp - copies a line then pastes it below the original
+ddp - swap current line with the next
 
-### File fuzzy search
+### Files Management
 SPC p f will open the fuzzy file search
+SPC b b - open recent files
+SPC f s - save changes to file
+(same as :w in command mode)
+SPC f S - save all open files
+(same as :wqa in command mode)
 
 ### Window management
 SPC w v - split vertically
@@ -95,6 +102,9 @@ SPC w s - split horizontally
 
 SPC w l - move to window on the right
 SPC w h - move to window on the left
+
+### Toggle Line Numbers
+SPC t n
 
 ### Select all
 ggVG
