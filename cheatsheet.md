@@ -110,6 +110,9 @@ While in command mode (prefixed with colon to differentiate)
 cw - deletes a word or to the end of a word based on the current cursor position then places you in insert mode.  
 We can use this in the same manner as delete e.g. c$ will delete to the end of the line from the current cursor.
 
+## Insert the contents of a file
+:r {filename} - places the contents of a file under the current cursor location
+
 ## Search
 /{term}{enter} - search forwards for a term  
 ?{term} - search backwards for a term  
