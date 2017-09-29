@@ -115,7 +115,7 @@ V - select the line
 G - move to end of buffer
 
 ### Tree view
-SPC f t - open tree view  
+SPC f t - open tree view at the current file level  
 The tree view is clickable, and can be focused and unfocused using the window commands mentioned previously.  
 It is traversed using hjkl or the arrow keys as normal.  
 Hitting enter will expand a folder.
@@ -234,15 +234,12 @@ Spacemacs helpfully installed the Ruby layer for me when I opened a Ruby file, n
 It auto completes the end keyword for me and highlights matching do / ends, so nice.
 
 #### RSpec
-NOTE: I currently can't get this to work, and all the commands show the Spring help.  
-Needs investigation.
-
 With the ruby layer we can run RSpec from inside Spacemacs.  
 By default, ruby-test-mode seems to be set to ruby-test, rather than rspec.  
 We can use a .dir-locals.el file to specify different test runners per project,  
 but let's keep it simple for now.
 
-Weirdly, we need to install the gem 'spring-commands-rspec' to get this to work inside of Spacemacs.  
+NOTE: We need to install the gem 'spring-commands-rspec' to get this to work inside of Spacemacs.  
 If you don't have it, you will see info about the usage of Spring rather than your test output.
 
 SPC m t a - run all specs  
@@ -266,12 +263,15 @@ xp - swap the character under the cursor with the next
 Xp - swap the current character with the previous
 
 ### Tree view
+SPC p t - open tree view with root directory view  
+
 R - mark directory as the root directory  
 K - go up to parent  
-SPC p t - open tree view with root directory view  
+
 c - create a node (look for the prompt that appears in the command strip at the bottom)  
 d - delete a node  
 r - rename a node  
+
 gr - refresh tree  
 
 [Docs here](http://spacemacs.org/doc/DOCUMENTATION.html#orgheadline120)
