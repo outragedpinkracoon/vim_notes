@@ -210,11 +210,13 @@ You can use a mirror https://github.com/melpa/melpa/blob/master/README.md#mirror
 #### How to add a mirror url
 go to your emacs.d directory and open the init.el file  
 Add this to the file (I added it to the bottom):  
+
 ```(add-to-list
   'package-archives
    ;; '("melpa" . "http://stable.melpa.org/packages/") ; reset back to this when Melpa is up
   '("melpa" . "http://www.mirrorservice.org/sites/stable.melpa.org/packages/")
-t)```
+t)
+```
 
 ### Install a layer
 Find the dotspacemacs-configuration-layer section of the .spacemacs config  
@@ -231,16 +233,33 @@ It does copy it though and allow me to paste into my Mac applications.
 Spacemacs helpfully installed the Ruby layer for me when I opened a Ruby file, neat.  
 It auto completes the end keyword for me and highlights matching do / ends, so nice.
 
-### RSpec
+#### RSpec
+NOTE: I currently can't get this to work, and all the commands show the Spring help.  
+Needs investigation.
+
 With the ruby layer we can run RSpec from inside Spacemacs.  
-By default, ruby-test-mode is set to ruby-test, we need to alter this to be rspec in the config file:  
-In dotspacemacs-configuration-layer, change ruby to (ruby :variables ruby-test-runner 'rspec)  
-The brackets are important, it won't work if you forget them.
+By default, ruby-test-mode seems to be set to ruby-test, rather than rspec.  
+We can use a .dir-locals.el file to specify different test runners per project,  
+but let's keep it simple for now.
+
+Weirdly, we need to install the gem 'spring-commands-rspec' to get this to work inside of Spacemacs.  
+If you don't have it, you will see info about the usage of Spring rather than your test output.
 
 SPC m t a - run all specs  
 SPC m t b - run the current spec file  
 SPC m t r - rerun last spec  
+SPC m t l - run last failed spec  
 SPC m t t - run spec at pointer  
+
+[Docs here](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/ruby#rspec-mode)
+
+#### Rubocop
+
+We can run Rubocop inside Spacemacs too  
+SPC m r r f - run on the current file  
+SPC m r r p - run on the entire project
+
+To show Rubocop errors on the screen, uncomment the syntax-checking layer in the config.
 
 ### Swap Characters
 xp - swap the character under the cursor with the next  
@@ -254,3 +273,5 @@ c - create a node (look for the prompt that appears in the command strip at the 
 d - delete a node  
 r - rename a node  
 gr - refresh tree  
+
+[Docs here](http://spacemacs.org/doc/DOCUMENTATION.html#orgheadline120)
