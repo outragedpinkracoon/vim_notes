@@ -187,4 +187,70 @@ Press ESC when finished.
 ### Faster insert at the end of the line
 A - moves to the end of the line and enables insert mode (NICE!)
 
+## Day 5
 
+Add a layer:  
+dotspacemacs-configuration-layers - add your layer here in the .spacemacs file
+
+### Modifying Spacemacs Configuration
+SPC f e d - edit the config  
+SPC f e R - reload spacemacs to pickup the change (remember to save!)
+
+### Window Management
+SPC w S - split horizontal and focus  
+SPC w V - split vertical and focus
+
+### Moving around the screen
+ctrl u - move halfway up the screen  
+ctrl d - move halfway down the screen
+
+### When Melpa is down
+You can use a mirror https://github.com/melpa/melpa/blob/master/README.md#mirrors
+
+#### How to add a mirror url
+go to your emacs.d directory and open the init.el file  
+Add this to the file (I added it to the bottom):  
+```(add-to-list
+  'package-archives
+   ;; '("melpa" . "http://stable.melpa.org/packages/") ; reset back to this when Melpa is up
+  '("melpa" . "http://www.mirrorservice.org/sites/stable.melpa.org/packages/")
+t)```
+
+### Install a layer
+Find the dotspacemacs-configuration-layer section of the .spacemacs config  
+Paste in the name of the layer you want to install.   
+You will see a whole bunch of commented out packages.
+
+### Copy to the clipboard
+We need to install the osx layer first, then we can do "*y to yank to the * register and copy to the system clipboard.  
+You can use :reg to see the contents of registers, it's kinda weird and cool.   
+I was expecting to see my copied text in there but it's not showing, that's a bit strange!  
+It does copy it though and allow me to paste into my Mac applications.
+
+### Ruby
+Spacemacs helpfully installed the Ruby layer for me when I opened a Ruby file, neat.  
+It auto completes the end keyword for me and highlights matching do / ends, so nice.
+
+### RSpec
+With the ruby layer we can run RSpec from inside Spacemacs.  
+By default, ruby-test-mode is set to ruby-test, we need to alter this to be rspec in the config file:  
+In dotspacemacs-configuration-layer, change ruby to (ruby :variables ruby-test-runner 'rspec)  
+The brackets are important, it won't work if you forget them.
+
+SPC m t a - run all specs  
+SPC m t b - run the current spec file  
+SPC m t r - rerun last spec  
+SPC m t t - run spec at pointer  
+
+### Swap Characters
+xp - swap the character under the cursor with the next  
+Xp - swap the current character with the previous
+
+### Tree view
+R - mark directory as the root directory  
+K - go up to parent  
+SPC p t - open tree view with root directory view  
+c - create a node (look for the prompt that appears in the command strip at the bottom)  
+d - delete a node  
+r - rename a node  
+gr - refresh tree  
