@@ -98,9 +98,27 @@ ddp - swap current line with the next
 [e - move line up
 ]e - move line down
 
+## Indent
+>> - indent once
+<< - unindent once
+
+## Commenting
+With evil-commentary layer
+gcc - comment or uncomment a line, prefix with number to repeat
+
+## Change Case
+Select a region in visual block mode
+u - lowercase
+U - uppercase
+
 ## Swap Characters
+With the ruby-on-rails layer
+:A
+
+## Swap between source and spec file
 xp - swap the character under the cursor with the next  
 Xp - swap the current character with the previous
+
 
 ## Go to last change
 '. (looks weird right?)
@@ -119,6 +137,9 @@ While in command mode (prefixed with colon to differentiate)
 ## Change word
 cw - deletes a word or to the end of a word based on the current cursor position then places you in insert mode.  
 We can use this in the same manner as delete e.g. c$ will delete to the end of the line from the current cursor.
+
+cW - change word up to the next space
+ct[character] - change up to (not including) the next instance of the specified character
 
 ## Insert the contents of a file
 :r {filename} - places the contents of a file under the current cursor location
@@ -155,7 +176,7 @@ SPC t n
 
 ## Tree view
 SPC f t - open tree view at the current file level  
-SPC p t - open tree view with root directory view 
+SPC p t - open tree view with root directory view
 
 The tree view is clickable, and can be focused and unfocused using normal window commands.  
 It is traversed using hjkl or the arrow keys as normal. Hitting enter will expand a folder.

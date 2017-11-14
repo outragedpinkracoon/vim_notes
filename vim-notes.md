@@ -275,3 +275,22 @@ r - rename a node
 gr - refresh tree  
 
 [Docs here](http://spacemacs.org/doc/DOCUMENTATION.html#orgheadline120)
+
+## Day 6
+
+### Indent
+>> - indent once  
+<< - unindent once  
+
+### Commenting
+With evil-commentary layer  
+gcc - comment or uncomment a line, prefix with number to repeat
+
+### Swap between source and spec file
+With the ruby-on-rails layer  
+:A
+
+### Change Case
+Select a region in visual block mode
+u - lowercase
+U - uppercase
