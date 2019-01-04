@@ -49,6 +49,8 @@ X - delete character before the cursor
 daw - delete the word under the cursor
 caw - delete the word under the cursor and put you in insert mode
 
+:5,20d delete from 5 to 20, with 5 and 20 inclusively removed.
+
 ## Command Format
 The format for commands is:
 
