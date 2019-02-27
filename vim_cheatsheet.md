@@ -143,11 +143,12 @@ N - traverse backwards through matches
 ## Matching brackets
 % - takes you to the corresponding matching bracket
 
-## Navigating Windows
+## Navigating Windows / Buffers
 
-:sp filename	Open filename in horizontal split
-:vsp filename	Open filename in vertical split
-Ctrl-w h Ctrl-w ←	Shift focus to split on left of current
-Ctrl-w l Ctrl-w →	Shift focus to split on right of current
-Ctrl-w j Ctrl-w ↓	Shift focus to split below the current
-Ctrl-w k Ctrl-w ↑	Shift focus to split above the current
+- :sp filename	Open window in horizontal split
+- :vsp filename	Open window in vertical split
+- Ctrl-w h Ctrl-w ←	Shift focus to split on left of current
+- Ctrl-w l Ctrl-w →	Shift focus to split on right of current
+- Ctrl-w j Ctrl-w ↓	Shift focus to split below the current
+- Ctrl-w k Ctrl-w ↑	Shift focus to split above the current
+- :ls - show all open buffers
